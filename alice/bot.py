@@ -1,9 +1,8 @@
-#MTQwNDQ5MDQwOTUyMjIzNzUwMQ.G42QBq.pBK8rLOclLgq-r1p3pTfkRWmUTqG9e9ccUCHUA
-
+import os
 import discord
 from discord.ext import commands
 
-TOKEN = "MTQwNDQ5MDQwOTUyMjIzNzUwMQ.G42QBq.pBK8rLOclLgq-r1p3pTfkRWmUTqG9e9ccUCHUA"
+TOKEN = DISCORD_TOKEN
 intents = discord.Intents.default()
 intents.message_content = True
 intents.voice_states = True  # 必須啟用語音事件
