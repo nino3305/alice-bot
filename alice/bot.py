@@ -2,7 +2,7 @@ import os
 import discord
 from discord.ext import commands
 
-TOKEN = DISCORD_TOKEN
+TOKEN = os.getenv("DISCORD_TOKEN")
 intents = discord.Intents.default()
 intents.message_content = True
 intents.voice_states = True  # 必須啟用語音事件
@@ -70,4 +70,5 @@ async def on_typing(channel, user, when):
         )
 
 bot.run(TOKEN)
+
 
