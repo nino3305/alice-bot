@@ -1,6 +1,7 @@
 import os
 import discord
 from discord.ext import commands
+print("DISCORD_TOKEN:", os.getenv("DISCORD_TOKEN"))
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 intents = discord.Intents.default()
@@ -70,6 +71,7 @@ async def on_typing(channel, user, when):
         )
 
 bot.run(TOKEN)
+
 
 
 
