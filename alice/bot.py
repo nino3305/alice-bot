@@ -70,7 +70,11 @@ async def on_typing(channel, user, when):
             delete_after=15  # 5 秒後自動刪除
         )
 
-bot.run(TOKEN)
+if os.getenv("BOT_DISABLED", "false").lower() == "true":
+    print("🚫 Bot 已停用，不會啟動。")
+else:
+    bot.run(TOKEN)
+
 
 
 
