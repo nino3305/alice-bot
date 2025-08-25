@@ -68,9 +68,11 @@ async def on_typing(channel, user, when):
         await channel.send(
             f"💬 {user.display_name} 正在打字...",
             delete_after=5  # 5 秒後自動刪除
+            allowed_mentions=discord.AllowedMentions.none()
         )
 
 bot.run(TOKEN)
+
 
 
 
