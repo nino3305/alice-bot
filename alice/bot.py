@@ -67,10 +67,11 @@ async def on_typing(channel, user, when):
     if isinstance(channel, discord.TextChannel):
         await channel.send(
             f"💬 {user.display_name} 正在打字...",
-            delete_after=15  # 5 秒後自動刪除
+            delete_after=5  # 5 秒後自動刪除
         )
 
 bot.run(TOKEN)
+
 
 
 
