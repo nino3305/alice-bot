@@ -10,7 +10,7 @@ intents.voice_states = True  # 必須啟用語音事件
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # 指定要發訊息的文字頻道 ID
-TARGET_CHANNEL_ID = 1404490261995978765  # 換成你的文字頻道ID
+TARGET_CHANNEL_ID = 1010848964981051424  # 換成你的文字頻道ID
 
 @bot.event
 async def on_ready():
@@ -71,6 +71,7 @@ async def on_typing(channel, user, when):
         )
 
 bot.run(TOKEN)
+
 
 
 
