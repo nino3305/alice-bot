@@ -29,6 +29,10 @@ async def on_message(message):
 
     if "dot" in content:
         await message.channel.send("dot隊怎麼你了")
+    elif "黃泉" in content:
+        await message.channel.send("感覺不如流螢")
+    elif "流螢" in content:
+        await message.channel.send("感覺不如大黑塔")
     elif "風堇" in content:
         await message.channel.send("有人提到二次元偶像嗎")
     elif "閉嘴" in content:
@@ -43,7 +47,18 @@ async def on_message(message):
         await message.channel.send("感覺不如星見雅")
     elif "雅" in content:
         await message.channel.send("感覺不如我")
-
+    elif "那刻夏" in content:
+        await message.channel.send("世界的真理，我已解明")
+    elif "archer" in content:
+        await message.channel.send("""I am the bone of my sword.
+Steel is my body, and fire is my blood.
+I have created over a thousand blades.
+Unknown to Death.
+Nor known to Life.
+Have withstood pain to create many weapons.
+Yet, those hands will never hold anything.
+So as I pray, "Unlimited Blade Works".""")
+    
     await bot.process_commands(message)
 
 # 偵測語音頻道進出
@@ -65,6 +80,7 @@ async def on_voice_state_update(member, before, after):
 
 
 bot.run(TOKEN)
+
 
 
 
