@@ -62,15 +62,10 @@ async def on_voice_state_update(member, before, after):
         if channel:
             await channel.send(f"👋 {member.display_name} 離開了語音頻道 {before.channel.name}")
 
-@bot.event
-async def on_typing(channel, user, when):
-    if isinstance(channel, discord.TextChannel):
-        await channel.send(
-            f"💬 {user.display_name} 正在打字...",
-            delete_after=5  # 5 秒後自動刪除
-        )
+
 
 bot.run(TOKEN)
+
 
 
 
