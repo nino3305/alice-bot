@@ -12,6 +12,10 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 # 指定要發訊息的文字頻道 ID
 TARGET_CHANNEL_ID = 1010848964981051424  # 換成你的文字頻道ID
 
+# 開關變數（預設開啟）
+keyword_enabled = True
+
+
 @bot.event
 async def on_ready():
     print(f"登入成功：{bot.user}")
@@ -96,6 +100,7 @@ async def on_voice_state_update(member, before, after):
 
 
 bot.run(TOKEN)
+
 
 
 
