@@ -30,16 +30,17 @@ async def on_voice_state_update(member, before, after):
         # 成員加入語音頻道
         channel = bot.get_channel(TARGET_CHANNEL_ID)
         if channel:
-            await channel.send(f":white_check_mark:   {member.display_name} 加入了語音頻道 {after.channel.name}")
+            await channel.send(f":white_check_mark:   <{member.display_name}> 加入了語音頻道 {after.channel.name}")
     elif before.channel is not None and after.channel is None:
         # 成員離開語音頻道
         channel = bot.get_channel(TARGET_CHANNEL_ID)
         if channel:
-            await channel.send(f":x:  {member.display_name} 離開了語音頻道 {before.channel.name}")
+            await channel.send(f":x:  <{member.display_name}> 離開了語音頻道 {before.channel.name}")
 
 
 
 bot.run(TOKEN)
+
 
 
 
